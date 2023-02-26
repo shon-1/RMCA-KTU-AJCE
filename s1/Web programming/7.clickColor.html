@@ -1,0 +1,30 @@
+<html>
+<center>
+<h1 id="h1">Different Background color</h1>
+<p id="pi">
+</p>
+<center>
+<button id="b1" > Click Here </button>
+<button id="b2" > Click here to change color</button>
+
+<script>
+    document.getElementById("b1").addEventListener("click",fun4)
+    document.getElementById("b2").addEventListener("click",fun5)
+
+function fun4(){
+   
+ }
+
+    function getColorCode() {
+      var makeColorCode = '0123456789ABCDEF';
+      var code = '#';
+      for (var count = 0; count < 6; count++) {
+         code =code+ makeColorCode[Math.floor(Math.random() * 16)];
+      }
+      return code;
+  }
+function fun5(){
+    document.body.style.backgroundColor = getColorCode()
+}
+</script>
+</html>
